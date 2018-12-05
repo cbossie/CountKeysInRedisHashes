@@ -24,7 +24,7 @@ namespace RedisHashCount
             Dictionary<string, string> results = new Dictionary<string, string>();
 
             //1) Get Keys
-            var keys = Client.SearchKeys($"{prefix}*");
+            var keys = Client.SearchKeys(prefix);
 
             //2) For each key, get the raw firm ID
             foreach (var key in keys)
